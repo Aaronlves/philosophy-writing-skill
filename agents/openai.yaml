@@ -1,0 +1,4 @@
+interface:
+  display_name: "Philosophy Writing"
+  short_description: "Draft and review philosophy arguments."
+  default_prompt: "Review this philosophy draft for thesis clarity, argument structure, prose, charity, objections, and concrete revisions."
