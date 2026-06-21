@@ -90,6 +90,23 @@ The skill guides Codex to:
 - Reply to objections by targeting their premise, inference, definition, scope condition, or method
 - Give concrete revision advice rather than generic praise
 
+## Sources and Acknowledgments
+
+This skill synthesizes and adapts practical guidance from the following philosophy-writing resources:
+
+- Jim Pryor, *Guidelines on Writing a Philosophy Paper* (jimpryor.net)
+- Michael Huemer, *Writing Guide* (University of Colorado Boulder)
+- Jazlyn Cartaya, *How to Write a Philosophy Paper: A 25-Rule Guide*
+- Elijah Millgram, *Writing Your Philosophy Paper: Common Problems to Avoid* (2024)
+- William Blattner, *Tips on Writing Philosophy Papers* (Georgetown University)
+- Helena de Bres, *The Pink Guide to Philosophy: How to Write Philosophy* (Wellesley College)
+- Bryan W. Roberts, *7 Steps to a Better Philosophy Paper* (London School of Economics)
+- Michael Tooley, *Writing Philosophy Essays* (University of Colorado Boulder)
+- Manuel Vargas, *How to Write (not Terrible) Philosophy Papers* (University of California, San Diego)
+- Justin Weinberg, *Writing a Good Philosophy Paper* (Daily Nous)
+
+These sources inform the skill's standards for thesis clarity, argument reconstruction, organization, plain prose, charitable interpretation, objection handling, and revision. The skill combines and generalizes their advice for use by Codex; it is not an official publication of, or endorsed by, the authors or their institutions.
+
 ## Repository
 
 GitHub: <https://github.com/Aaronlves/philosophy-writing-skill>

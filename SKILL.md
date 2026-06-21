@@ -20,15 +20,17 @@ For long-form projects such as dissertations, preserve the difference between th
 When asked to generate philosophical content:
 
 1. Start with a brief outline unless the user explicitly asks for prose immediately.
-2. State the thesis in the first substantive sentence.
-3. Follow the thesis with a roadmap explaining how the paper will defend it.
-4. Organize the piece into numbered, descriptive sections.
-5. Define technical terms on first use.
-6. Present arguments explicitly, including premises, conclusion, and intermediate steps where useful.
-7. Use examples for abstract claims.
-8. Present at least one serious objection to the main claim.
-9. Answer the objection rather than leaving it hanging.
-10. End by summarizing the argument; do not introduce new arguments in the conclusion.
+2. Build two outlines when the task is substantial: first map the logical structure of the argument, then map the sections and paragraphs that will present it.
+3. State the thesis early, normally in the first substantive sentence. Delay it only when a short case or puzzle materially clarifies the problem.
+4. Follow the thesis with a roadmap explaining how the paper will defend it.
+5. Organize the piece into numbered, descriptive sections when its length warrants sections.
+6. Define technical terms on first use.
+7. Present arguments explicitly, including premises, conclusion, and intermediate steps where useful.
+8. Support each important premise, not merely the conclusion as a whole.
+9. Use examples for abstract claims.
+10. Present at least one serious objection to the main claim when the genre and length permit it.
+11. Answer the objection rather than leaving it hanging.
+12. End by summarizing the argument; do not introduce new arguments in the conclusion.
 
 For short assignments, keep the introduction terse: problem, thesis, roadmap.
 
@@ -94,6 +96,10 @@ When criticizing an argument, identify exactly where it fails:
 
 Use the argument as the filter for inclusion. If a paragraph does not help establish the thesis, explain why it should be cut or moved.
 
+Before drafting a critical paper, reconstruct both the target argument and the author's response in premise-conclusion form. Treat this logical outline as distinct from the paper's section outline.
+
+Allocate space by argumentative importance. Keep background and exposition only as long as needed for an accurate reconstruction; reserve most of the paper for analysis, premise support, objections, and replies.
+
 ## Structure Rules
 
 Make structure obvious. Use clear signposts such as:
@@ -140,6 +146,10 @@ Define central terms, even if they seem familiar. Do not settle contested philos
 
 Use examples constantly. If an abstract claim cannot be illustrated with a concrete example, the claim probably needs more work.
 
+Calibrate explanations to the intended reader. Unless the user specifies otherwise, write for an intelligent reader who lacks the author's private assumptions and may not know specialized terminology.
+
+Use first-person formulations such as "I argue" when they clearly distinguish the author's commitments from views under discussion. Do not hide argumentative responsibility behind impersonal phrasing.
+
 Avoid grand openings, historical filler, autobiographical narration, and suspense. Philosophy papers are not mystery stories.
 
 ## Engagement Rules
@@ -184,6 +194,83 @@ For each objection:
 6. Mark remaining pressure points instead of hiding them.
 
 Do not answer an objection by merely restating the thesis. Show which premise or assumption in the objection fails, or explain why the objection forces a revision of the thesis.
+
+Prefer depth over quantity. Develop one or two serious objections fully rather than listing many thin objections. If an objection cannot be answered, narrow or revise the thesis instead of ignoring the problem.
+
+Use measured evaluative language. Prefer "raises a serious difficulty" or "gives reason to reject" over claims that an argument is obviously absurd, devastating, or conclusively refuted unless the reasoning warrants that strength.
+
+## Sources and Citations
+
+Use APA 7th edition for all citations and reference lists.
+
+Apply these APA 7 rules:
+
+- Cite paraphrases as `(Author, Year)`.
+- Cite direct quotations as `(Author, Year, p. 00)` or use an appropriate paragraph or section locator when pages are unavailable.
+- Separate multiple works in one parenthetical citation with semicolons.
+- Format reference entries with hanging indents.
+- Present DOIs as `https://doi.org/...` links.
+- Do not put quotation marks around block quotations.
+- Do not add obsolete medium labels such as `Print` or unnecessary access dates.
+- Use Zotero or another reliable citation processor when available, but verify the generated metadata and formatting.
+
+Cite claims, interpretations, and borrowed distinctions that are not common knowledge. Prefer primary texts and professionally curated scholarly sources. Treat reference works as orientation, not substitutes for engagement with the relevant arguments.
+
+Paraphrase accurately and cite the source. Use direct quotations selectively, include page or location information when available, and explain the quotation's argumentative role. Do not expect a quotation or citation to establish a claim by authority alone.
+
+## Revision Workflow
+
+Revise in passes rather than trying to fix everything at once:
+
+1. Check whether the thesis matches what the paper actually establishes; narrow or revise it when necessary.
+2. Check the logical outline: premises, inferences, counterexamples, objections, and replies.
+3. Check the structural outline: section order, paragraph function, signposting, and transitions.
+4. Cut material that does not advance the argument and compress unnecessary stage-setting.
+5. Replace vague or inflated language with precise claims.
+6. Read difficult passages aloud and test central claims with concrete examples.
+7. Verify quotations, citations, terminology, and consistency only after the argument is stable.
+
+## Examples
+
+Use these patterns as models, adapting their content to the actual argument.
+
+Thesis:
+
+- Weak: "This paper is about lying."
+- Strong: "I argue that lying and misleading differ morally because lying normally involves an assertion that the speaker believes to be false."
+
+Specificity:
+
+- Vague: "Rights are related to obligations."
+- Specific: "If a person has a right to perform an action, others normally have an obligation not to prevent that action."
+
+Conciseness:
+
+- Wordy: "The question as to whether fish can experience pain is an important one."
+- Concise: "Whether fish experience pain is important."
+
+Signposting:
+
+- "This section defends the argument's second premise."
+- "One might object that the example depends on an unusual case."
+- "This reply fails because it does not address the scope condition."
+
+Objection and reply:
+
+- Objection: "The account is too broad because it classifies reflexive fear responses as reason-responsive emotions."
+- Reply: "The objection succeeds against the unrestricted account. Restricting the account to responses that can be modified by recognized evidence avoids the counterexample."
+
+APA 7 in-text citations:
+
+- Paraphrase: `(Author, 2024)`
+- Direct quotation: `(Author, 2024, p. 17)`
+- Multiple sources: `(Author, 2020; Other, 2022)`
+
+APA 7 reference patterns:
+
+- Journal article: `Author, A. A. (2024). Title of article. *Journal Title, 12*(3), 45-67. https://doi.org/10.xxxx/xxxxx`
+- Book: `Author, A. A. (2024). *Title of book*. Publisher.`
+- Chapter: `Author, A. A. (2024). Title of chapter. In E. E. Editor (Ed.), *Title of book* (pp. 10-30). Publisher.`
 
 ## Common Errors To Flag
 
