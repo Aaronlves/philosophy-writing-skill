@@ -1,4 +1,4 @@
 interface:
   display_name: "Philosophy Writing"
-  short_description: "Draft and review philosophy arguments."
-  default_prompt: "Review this philosophy draft for thesis clarity, argument structure, prose, charity, objections, and concrete revisions."
+  short_description: "Draft and review philosophy prose"
+  default_prompt: "Use $philosophy-writing to draft or review this philosophy prose for thesis clarity, argument structure, definitions, objections, literature role, and concrete revisions."

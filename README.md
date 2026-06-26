@@ -1,22 +1,21 @@
 # Philosophy Writing Skill
 
-A Codex skill for drafting, reviewing, revising, outlining, and analyzing philosophical prose, including dissertation-scale and other long-form philosophy projects.
+`philosophy-writing` is a general Codex skill for drafting, reviewing, revising, outlining, and analyzing philosophical prose.
 
-The skill emphasizes thesis-first, argument-driven philosophy writing: clear claims, explicit premises, stable definitions, charitable engagement, concrete examples, serious objections, and direct replies.
+The skill is project-neutral. It does not contain private research context, personal project files, or project-specific structure.
 
-## What It Helps With
+## What It Does
 
-- Drafting philosophy papers and short responses
-- Sharpening thesis statements
-- Building argument outlines
-- Reconstructing arguments in premise-conclusion form
-- Reviewing drafts for structure, prose, and argumentative quality
-- Developing dissertation chapters, proposals, and long-form project sections
-- Distinguishing stable commitments from exploratory ideas
-- Testing definitions against cases and counterexamples
-- Keeping literature reviews subordinate to the main argument
-- Strengthening objections and replies
-- Cutting exposition that does not serve the main argument
+- Sharpens thesis statements.
+- Builds argument outlines and section plans.
+- Reconstructs arguments in premise-conclusion form.
+- Reviews drafts for thesis clarity, structure, definitions, objections, source use, and prose.
+- Tests definitions against central cases, edge cases, and counterexamples.
+- Turns literature review into argument-driven prose.
+- Strengthens objections and replies.
+- Cuts exposition that does not serve the main argument.
+- Preserves the difference between stable commitments and exploratory material.
+- Gives concrete revision advice instead of generic praise.
 
 ## Install
 
@@ -33,79 +32,114 @@ cd ~/.codex/skills/philosophy-writing
 git pull
 ```
 
-## Usage
-
-Ask Codex for help with philosophy writing. For example:
+## Usage Examples
 
 ```text
-Review this philosophy draft for thesis clarity, argument structure, objections, and prose.
+Use philosophy-writing to review this draft for thesis clarity, argument structure, objections, and prose.
 ```
 
 ```text
-Help me turn this idea into a modest, defensible philosophy paper thesis and outline.
+Use philosophy-writing to turn this idea into a modest, defensible philosophy paper thesis and outline.
 ```
 
 ```text
-Help me plan this dissertation chapter by identifying its function, target premise, and contribution to the larger argument.
+Use philosophy-writing to test this definition against central cases, edge cases, and possible counterexamples.
 ```
 
 ```text
-Test this definition against central cases, edge cases, and possible counterexamples.
+Use philosophy-writing to turn this literature review into an argument-driven section that classifies each source by its role.
 ```
 
 ```text
-Turn this literature review into an argument-driven section that classifies each source by its role.
+Use philosophy-writing to revise this paragraph so it is clearer, more precise, and more directly connected to the thesis.
 ```
+
+## Output Pattern
+
+The skill can produce:
+
+1. outlines;
+2. draft prose;
+3. draft reviews;
+4. revised prose;
+5. argument repairs;
+6. objection-and-reply sections;
+7. literature review prose.
+
+It defaults to advisory output unless the user explicitly authorizes file edits.
+
+## Public Boundary
+
+This repository is intentionally general. Keep private project context, file paths, unpublished arguments, feedback, and local workflow rules in a separate private extension or workspace instruction file.
+
+A minimal private extension can use this structure:
 
 ```text
-Reconstruct my argument in premise-conclusion form and identify the weakest premise.
+project-philosophy-writing/
+├── SKILL.md
+├── agents/
+│   └── openai.yaml
+└── references/
+    ├── project-context.md
+    ├── writing-templates.md
+    └── workspace-policy.md
 ```
+
+Use this prompt to create one:
 
 ```text
-Revise this paragraph so it is clearer, more precise, and more directly connected to the thesis.
+Build a private project-specific extension for the installed
+`philosophy-writing` skill. Do not copy or rewrite the general philosophy
+writing standards. The extension must use `philosophy-writing` for thesis-first
+drafting, argument repair, definition testing, objection/reply development,
+literature review prose, and revision standards, then add only my local project
+context and workflow rules.
+
+Create the extension as a separate skill named `[project-name]-philosophy-writing`
+in `[private skill directory]`. Keep it outside any public repository.
+
+Include:
+
+- the project question, thesis, and stable commitments;
+- tentative hypotheses and open questions, clearly separated from stable claims;
+- preferred terms, definitions, and distinctions;
+- section or part functions, if relevant;
+- writing templates and output formats;
+- citation style and evidence rules;
+- paths and naming conventions for private files;
+- rules for when Codex may read, create, or update project files;
+- privacy boundaries and material that must not be exported, searched, or published.
+
+Design requirements:
+
+1. Keep general philosophy-writing standards in `philosophy-writing`; do not
+   duplicate them.
+2. Make the extension trigger only when prose is being drafted, reviewed, or
+   revised for this specific project.
+3. Tell the agent to use both skills together: the extension supplies local
+   project context, and `philosophy-writing` supplies the general method.
+4. Treat project notes as context, not as independent scholarly evidence.
+5. Preserve existing project files and conventions.
+6. Do not create or update shared files unless the write policy authorizes it.
+7. Put long project context in clearly named reference files and keep `SKILL.md`
+   concise, with explicit instructions about when each reference must be read.
+8. Include `agents/openai.yaml`, validate the finished skill, and report its
+   private installation path and file structure.
+9. Review the completed extension for personal or sensitive information before
+   any publication. Default to keeping the entire extension private.
+
+After creating it, show me a brief boundary audit: what remains in the general
+skill, what lives in the private extension, and whether project-specific or
+personal information appears outside the private directory.
 ```
 
-## Skill Contents
+## Repository Contents
 
 ```text
-SKILL.md              Core skill instructions
-agents/openai.yaml    Codex UI metadata
+SKILL.md
+agents/openai.yaml
+README.md
 ```
-
-## Core Principles
-
-The skill guides Codex to:
-
-- Start with a clear, contestable thesis
-- Prefer modest and precise claims
-- Make argumentative structure explicit
-- Define technical terms on first use
-- Preserve the difference between a project's stable thesis and local section-level claims
-- Identify each chapter or section's role in the larger argument
-- Treat definitions as load-bearing parts of the thesis, not decoration
-- Classify sources by argumentative role rather than summarizing them neutrally
-- Use examples to test abstract claims
-- Steelman opposing views before criticizing them
-- Treat objections as central, not decorative
-- Reply to objections by targeting their premise, inference, definition, scope condition, or method
-- Give concrete revision advice rather than generic praise
-
-## Sources and Acknowledgments
-
-This skill synthesizes and adapts practical guidance from the following philosophy-writing resources:
-
-- Jim Pryor, *Guidelines on Writing a Philosophy Paper* (jimpryor.net)
-- Michael Huemer, *Writing Guide* (University of Colorado Boulder)
-- Jazlyn Cartaya, *How to Write a Philosophy Paper: A 25-Rule Guide*
-- Elijah Millgram, *Writing Your Philosophy Paper: Common Problems to Avoid* (2024)
-- William Blattner, *Tips on Writing Philosophy Papers* (Georgetown University)
-- Helena de Bres, *The Pink Guide to Philosophy: How to Write Philosophy* (Wellesley College)
-- Bryan W. Roberts, *7 Steps to a Better Philosophy Paper* (London School of Economics)
-- Michael Tooley, *Writing Philosophy Essays* (University of Colorado Boulder)
-- Manuel Vargas, *How to Write (not Terrible) Philosophy Papers* (University of California, San Diego)
-- Justin Weinberg, *Writing a Good Philosophy Paper* (Daily Nous)
-
-These sources inform the skill's standards for thesis clarity, argument reconstruction, organization, plain prose, charitable interpretation, objection handling, and revision. The skill combines and generalizes their advice for use by Codex; it is not an official publication of, or endorsed by, the authors or their institutions.
 
 ## Repository
 
