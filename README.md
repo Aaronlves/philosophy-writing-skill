@@ -393,6 +393,88 @@ Common problems to flag:
 - "therefore" or "thus" marks a weak inference;
 - "I believe" is used as support.
 
+## Creating a Private Prose-Control File
+
+This public repository does not include a prose-control protocol. A prose-control file should usually be private because it records a user's preferred style, model papers, local conventions, and revision habits.
+
+If you want Codex to imitate a prose style you admire, create a private file such as:
+
+```text
+project-philosophy-writing/
+└── references/
+    └── prose-control.md
+```
+
+Build it from papers, articles, or book chapters whose prose you like. Use multiple models rather than one source, and extract general writing principles rather than copying sentences.
+
+Recommended workflow:
+
+1. Choose 3-8 model texts whose prose you admire.
+2. For each text, identify what you like:
+   - sentence length;
+   - paragraph rhythm;
+   - thesis placement;
+   - transition style;
+   - use of examples;
+   - use of objections;
+   - level of technical vocabulary;
+   - balance between exposition and argument;
+   - how sources are introduced;
+   - how the author signals uncertainty, contrast, and concession.
+3. Extract reusable style rules in your own words.
+4. Separate style rules from philosophical commitments. Do not copy the model author's thesis, terminology, or argumentative substance unless you are properly citing and discussing it.
+5. Add positive rules, negative rules, and before/after examples from your own prose.
+6. Keep the file private if it mentions unpublished writing, personal projects, feedback, or local file paths.
+
+Suggested prompt:
+
+```text
+Help me create a private prose-control file for use with the installed
+`philosophy-writing` skill.
+
+I will provide several papers or excerpts whose prose style I admire. Analyze
+their writing style without copying their sentences. Extract reusable guidance
+for my own philosophical prose.
+
+For each model text, identify:
+
+- thesis placement;
+- paragraph structure;
+- sentence rhythm;
+- transition patterns;
+- use of examples;
+- use of objections and replies;
+- handling of technical terms;
+- balance between exposition and original argument;
+- citation and source-integration habits;
+- tone, directness, and level of abstraction.
+
+Then create a private `prose-control.md` with these sections:
+
+1. Purpose and scope
+2. Model texts used
+3. General style principles
+4. Sentence-level preferences
+5. Paragraph-level preferences
+6. Argument-presentation preferences
+7. Source-integration preferences
+8. Objection-and-reply preferences
+9. Things to avoid
+10. Revision checklist
+
+Rules:
+
+- Do not copy distinctive sentences from the model texts.
+- Do not import the model authors' philosophical commitments into my work.
+- Treat the file as style guidance only.
+- Keep philosophical accuracy, argument validity, and citation duties higher
+  priority than style imitation.
+- Mark this file private if it contains my unpublished prose, project details,
+  or personal writing preferences.
+```
+
+When using a prose-control file, apply it only after the argument is stable. Style control should polish and discipline prose; it should not silently change the thesis, definitions, scope, or evidential commitments.
+
 ## Citation and Source Discipline
 
 Use the citation style specified by the user, department, journal, or target venue. If no style is specified, default to APA 7.

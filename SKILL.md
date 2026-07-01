@@ -238,6 +238,16 @@ Avoid grand openings, historical filler, autobiographical narration, and suspens
 
 Plain language does not mean conceptual flattening. Preserve technical distinctions when they matter.
 
+## Optional Private Prose-Control File
+
+If the user supplies a private prose-control file, use it as style guidance after the argument, definitions, and structure are stable.
+
+Treat prose-control guidance as subordinate to philosophical accuracy. Do not let style imitation alter the thesis, scope, definitions, citations, or argumentative commitments.
+
+If no prose-control file is supplied, use the general prose rules in this skill. Do not invent a personal style protocol for the user.
+
+A prose-control file should be private when it is based on unpublished drafts, personal notes, feedback, or project-specific writing conventions.
+
 ## Engagement Rules
 
 Steelman opponents. Present the strongest version of the opposing view before criticizing it.
