@@ -21,6 +21,39 @@ Use `philosophy-writing` when you want Codex to help with:
 
 The skill is not a private project manager. It should not silently update files, promote exploratory ideas into settled claims, or export private material.
 
+## Quick Workflow
+
+For most writing tasks, use this order:
+
+1. Identify the genre, audience, target claim, and stage of the draft.
+2. State the local thesis or section function before polishing prose.
+3. Build the argument spine: conclusion, premises, suppressed assumptions, examples, objections, and replies.
+4. Check definitions and distinctions for stability.
+5. Draft or revise prose only after the argumentative role of the passage is clear.
+6. Mark unsupported source claims, unverifiable citations, and unresolved philosophical risks.
+7. Polish sentence rhythm, transitions, and style last.
+
+The skill should be explicit about uncertainty. It is acceptable for Codex to say "I don't know" or "I am not sure" when the available material does not support a confident answer.
+
+## Public Skill vs. Private Extension
+
+Keep this repository general. It should contain the reusable method for philosophy writing: thesis-first drafting, argument repair, definition testing, objection handling, literature-review prose, and revision standards.
+
+Put project-specific material in a private extension instead:
+
+```text
+project-philosophy-writing/
+├── SKILL.md
+├── agents/
+│   └── openai.yaml
+└── references/
+    ├── project-context.md
+    ├── writing-templates.md
+    └── write-policy.md
+```
+
+The private extension can contain preferred terms, project claims, draft statuses, source-placement rules, file paths, templates, and write permissions. The public skill should not contain those details.
+
 ## Installation
 
 Clone the repository into your Codex skills folder:
@@ -154,7 +187,7 @@ Use philosophy-writing to turn this literature review into an argument-driven se
 Use philosophy-writing to revise this paragraph so it is clearer, more precise, and more directly connected to the thesis.
 ```
 
-## Workflow Overview
+## Detailed Workflow Overview
 
 The skill follows a staged workflow:
 
@@ -503,7 +536,7 @@ Philosophical risk:
 Follow-up needed:
 ```
 
-## Private Extensions
+## Creating a Private Project Extension
 
 For a full research workflow, keep this public skill general and create a separate private extension. The extension should supply local project context, preferred terms, file paths, templates, and write permissions.
 
@@ -517,7 +550,7 @@ project-philosophy-writing/
 └── references/
     ├── project-context.md
     ├── writing-templates.md
-    └── workspace-policy.md
+    └── write-policy.md
 ```
 
 Use this prompt to create one:

@@ -17,7 +17,7 @@ Prefer modest, precise theses. A good paper makes one small point clearly and su
 
 For long-form projects, preserve the difference between the larger project thesis and local section-level claims. Each section should have its own task, but it must serve the larger argument.
 
-When working inside a research workspace with local operating instructions, treat those local rules as constraints on writing and revision. Do not move private or unpublished project content outside the workspace unless the user explicitly authorizes it.
+When the user supplies project instructions, treat them as constraints on writing and revision. Do not move private or unpublished project content into public outputs unless the user explicitly authorizes it.
 
 ## Genre Sensitivity
 
@@ -119,14 +119,14 @@ When working on theses, proposals, articles, books, or other multi-section proje
 
 1. Identify the central thesis, current definition, section function, and target premise before drafting.
 2. Distinguish stable commitments from exploratory ideas. Do not treat brainstorming as settled doctrine.
-3. Use project outlines, concept files, argument maps, local notes, or source notes when the user provides them.
+3. Use project outlines, concept notes, argument sketches, writing plans, or source notes when the user provides them.
 4. Keep literature review subordinate to the argument; do not let it become a neutral survey.
 5. Track how each section contributes to the whole project: background, conceptual clarification, premise defense, objection, reply, implication, or transition.
 6. Prefer modular development: concepts first, arguments second, objections third, prose after the machinery is clear.
 7. When a stable definition, distinction, argument, or objection/reply is accepted, preserve it consistently across later prose.
 8. Do not start with an introduction merely because it appears first in the final order. In long projects, introductions are often best drafted after the positive argument and objections are stable.
 
-If a local workflow defines statuses, preserve those statuses in drafting decisions. Use promising material as candidate argument, not as established premise, until the user or local workflow marks it as settled.
+If the user marks material with statuses such as tentative, draft, accepted, rejected, or unresolved, preserve those statuses in drafting decisions. Use promising material as candidate argument, not as established premise, until the user marks it as settled.
 
 Do not strengthen the status of any claim, definition, argument, or objection merely by polishing its prose.
 
@@ -328,7 +328,7 @@ Use one of these modes:
 
 - `advisory-only`: give advice, diagnosis, or draft prose in the response; do not edit files.
 - `patch-proposal`: propose exact changes or replacement passages; do not write files.
-- `authorized-file-edit`: edit only the files and sections explicitly authorized by the user or active workspace workflow.
+- `authorized-file-edit`: edit only the files and sections explicitly authorized by the user.
 
 If the mode is unclear, use `advisory-only`.
 
