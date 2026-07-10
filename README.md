@@ -1,45 +1,22 @@
 # Philosophy Writing Skill
 
-`philosophy-writing` is a general Codex skill for drafting, reviewing, revising, outlining, and analyzing philosophical prose. It guides Codex toward thesis-first, argument-driven writing: clear claims, explicit premises, stable definitions, charitable engagement, serious objections, direct replies, and concrete prose revision.
-
-The repository is intentionally project-neutral. It does not contain private research context, personal file paths, project structure, unpublished arguments, or project-specific claims.
-
-## What This Skill Is For
-
-Use `philosophy-writing` when you want Codex to help with:
-
-- sharpening a thesis statement;
-- turning an idea into an argument outline;
-- drafting philosophy prose;
-- reviewing a paragraph, section, essay, proposal, article, or long-form project;
-- revising prose for clarity, precision, and argumentative force;
-- reconstructing an argument in premise-conclusion form;
-- testing a definition against central cases, edge cases, and counterexamples;
-- developing objections and replies;
-- making literature review prose dialectical rather than merely descriptive;
-- identifying unsupported premises, weak transitions, vague terms, and overclaims.
-
-The skill is not a private project manager. It should not silently update files, promote exploratory ideas into settled claims, or export private material.
+`philosophy-writing` is a project-neutral Codex skill for drafting, revising, outlining, explaining, and conducting revision-oriented review of philosophical prose. It is designed around philosophical questions, concepts, interpretations, arguments, objections and replies, thought experiments, and normative burdens—not scientific manuscript structure or data-driven research. It preserves the writer's commitments rather than silently replacing them.
 
 ## Quick Workflow
 
-For most writing tasks, use this order:
+1. Identify genre, audience, stage, local claim, and passage function.
+2. State what must be preserved and what the passage must accomplish.
+3. Build the logical, interpretive, or dialectical structure before polishing prose.
+4. Check scope, force, definitions, objections, and source support.
+5. Draft or revise for the actual genre.
+6. Keep substantive alternative arguments separate unless requested.
+7. Polish transitions and sentences last.
 
-1. Identify the genre, audience, target claim, and stage of the draft.
-2. State the local thesis or section function before polishing prose.
-3. Build the argument spine: conclusion, premises, suppressed assumptions, examples, objections, and replies.
-4. Check definitions and distinctions for stability.
-5. Draft or revise prose only after the argumentative role of the passage is clear.
-6. Mark unsupported source claims, unverifiable citations, and unresolved philosophical risks.
-7. Polish sentence rhythm, transitions, and style last.
-
-The skill should be explicit about uncertainty. It is acceptable for Codex to say "I don't know" or "I am not sure" when the available material does not support a confident answer.
+It is acceptable to say “I do not know” or “the available source does not settle this.” Polishing must not promote exploratory claims, strengthen source attributions, or change a load-bearing definition without notice.
 
 ## Public Skill vs. Private Extension
 
-Keep this repository general. It should contain the reusable method for philosophy writing: thesis-first drafting, argument repair, definition testing, objection handling, literature-review prose, and revision standards.
-
-Put project-specific material in a private extension instead:
+This repository contains the reusable writing method. Keep personal prose preferences, unpublished project claims, local statuses, source maps, file paths, and write permissions in a private extension.
 
 ```text
 project-philosophy-writing/
@@ -48,567 +25,190 @@ project-philosophy-writing/
 │   └── openai.yaml
 └── references/
     ├── project-context.md
-    ├── writing-templates.md
+    ├── prose-control.md
     └── write-policy.md
 ```
 
-The private extension can contain preferred terms, project claims, draft statuses, source-placement rules, file paths, templates, and write permissions. The public skill should not contain those details.
+Apply private prose-control guidance only after the philosophical structure is stable. Style imitation must not alter thesis, scope, definitions, citations, or argumentative commitments.
+
+## Deploying a Personal Philosophy-Writing Skill
+
+Use a personal extension when you want `philosophy-writing` to serve a specific project, thesis, course, article, or long-form manuscript without putting private material in this public repository. The extension should be a thin adapter: it supplies project context, preferred prose-control guidance, templates, and write permissions, while this public skill supplies the general writing method.
+
+Recommended private structure:
+
+```text
+my-project-philosophy-writing/
+├── SKILL.md
+├── agents/
+│   └── openai.yaml
+└── references/
+    ├── project-context.md
+    ├── prose-control.md
+    ├── writing-templates.md
+    ├── source-use-policy.md
+    └── write-policy.md
+```
+
+Deploy it locally:
+
+```bash
+mkdir -p ~/.codex/skills/my-project-philosophy-writing/agents
+mkdir -p ~/.codex/skills/my-project-philosophy-writing/references
+```
+
+Then create the files above. Keep `SKILL.md` concise:
+
+````markdown
+---
+name: my-project-philosophy-writing
+description: "Use only when philosophical prose is being drafted, revised, outlined, or reviewed for [project name]. Pair with philosophy-writing for the general writing method. Do not use for unrelated writing or unauthorized file updates."
+---
+
+# My Project Philosophy Writing
+
+Use `philosophy-writing` for thesis-first drafting, argument repair, definition testing, objection and reply handling, literature-review prose, and revision standards. This personal skill supplies only project context, prose-control guidance, templates, source-use rules, and permissions.
+
+Before drafting or revising, record:
+
+```text
+Task mode:
+Project context:
+Text or target section:
+What must be preserved:
+Read set:
+Write set:
+Authorized output:
+File-update permission:
+Stop condition:
+```
+
+Read only the needed references:
+
+- `references/project-context.md` for stable commitments, tentative hypotheses, terminology, section functions, and open questions.
+- `references/prose-control.md` only after the thesis, argument, definitions, and source responsibilities are stable.
+- `references/writing-templates.md` when a project-specific output form is required.
+- `references/source-use-policy.md` before making source claims, literature-review claims, or citation-dependent prose.
+- `references/write-policy.md` before creating or updating any file.
+````
+
+Create `agents/openai.yaml`:
+
+```yaml
+interface:
+  display_name: "My Project Philosophy Writing"
+  short_description: "Draft and revise project prose"
+  default_prompt: "Use $my-project-philosophy-writing with $philosophy-writing to draft or revise this project prose while preserving the current thesis, definitions, source boundaries, and permissions."
+```
+
+To check deployment, start a new Codex session or reload skills if your environment requires it, then run:
+
+```text
+Use $my-project-philosophy-writing with $philosophy-writing to revise this paragraph. Do not update files. State the task mode, what must be preserved, read set, write set, and stop condition first.
+```
+
+Before using or sharing the personal skill:
+
+1. Verify that its description triggers only for the intended project.
+2. Keep general writing rules in `philosophy-writing`; do not duplicate them.
+3. Put long project context in `references/`, not in `SKILL.md`.
+4. Separate stable commitments from tentative hypotheses and open questions.
+5. Treat notes and drafts as context, not as independent scholarly evidence.
+6. Require verification before promoting source claims into polished prose.
+7. Keep prose-control subordinate to thesis, argument, definitions, source fidelity, and citation duties.
+8. Test with one ordinary revision, one thesis-changing revision request, and one unauthorized file-update request.
+9. Scan the folder for personal names, absolute paths, unpublished claims, draft prose, and institution-specific details before publishing anything.
+
+Keep the personal skill private by default. If you later publish a template, replace project facts with placeholders and remove all local paths, identifiers, private claims, and prose samples.
 
 ## Installation
 
-Clone the repository into your Codex skills folder:
+Clone the repository into the Codex skills folder:
 
 ```bash
 git clone https://github.com/Aaronlves/philosophy-writing-skill.git ~/.codex/skills/philosophy-writing
 ```
 
-If you already have a local copy, update it with:
-
-```bash
-cd ~/.codex/skills/philosophy-writing
-git pull
-```
-
-The skill folder should contain:
+The operational bundle is:
 
 ```text
 philosophy-writing/
 ├── SKILL.md
-├── README.md
-└── agents/
-    └── openai.yaml
+├── agents/
+│   └── openai.yaml
+└── references/
+    ├── argument-and-definition-standards.md
+    ├── literature-and-long-form-prose.md
+    ├── output-contracts.md
+    └── review-and-revision.md
+```
+
+`README.md` is user-facing documentation; Codex follows `SKILL.md` and loads references as needed.
+
+## Use It For
+
+- thesis, roadmap, outline, paragraph, section, article, proposal, or chapter drafting;
+- revision that preserves an intended thesis;
+- argument repair, definition testing, objections, concessions, and replies;
+- historical or exegetical exposition;
+- phenomenological or descriptive philosophy;
+- debate maps and question-focused exposition;
+- literature review organized by philosophical role;
+- local review aimed at revising the text;
+- sentence-level polish after the philosophy is stable.
+
+Use `paper-analysis` for source-grounded paper analysis. Use a separate source-checking workflow for quotation, page, metadata, or claim-support checks. Use a separate peer review workflow for independent holistic or referee-style assessment.
+
+## Genre Sensitivity
+
+The skill uses analytic-essay conventions as defaults, not universal laws.
+
+- Argumentative work makes claims, grounds, inferences, objections, and replies explicit where useful.
+- Historical and exegetical work separates textual evidence, interpretation, rival readings, and present significance.
+- Phenomenological and descriptive work separates description, case, concept, explanation, and later metaphysical or normative conclusions.
+- Formal work explains assumptions, derivation, interpretation, and limits.
+- Literature review and debate exposition organize positions by questions and pressures rather than by author catalogue, unless chronology itself matters.
+
+Topic sentences, short sentences, examples, and first-person signposts are aids. Use them when they clarify the philosophy; do not impose them mechanically.
+
+## File Modes
+
+| Mode | Use |
+| --- | --- |
+| `advisory-only` | Give advice or prose in chat without editing files. |
+| `patch-proposal` | Provide exact replacement text without writing it. |
+| `authorized-file-edit` | Edit only the files and sections authorized for the current task. |
+
+## Example Prompts
+
+```text
+Use $philosophy-writing to revise this paragraph while preserving its thesis. Flag any change that would alter scope or argumentative burden.
+```
+
+```text
+Use $philosophy-writing to turn this idea into a modest thesis, argument spine, roadmap, and section outline.
+```
+
+```text
+Use $philosophy-writing to compare two readings of this passage. Separate textual evidence, interpretation, and philosophical evaluation.
+```
+
+```text
+Use $philosophy-writing to reorganize this literature review by questions, positions, and residual pressures rather than by author.
 ```
 
 ## Creating a Private Prose-Control File
 
-This public repository does not include a prose-control protocol. A prose-control file should usually be private because it records a user's preferred style, model papers, local conventions, and revision habits.
+Build prose control from several model texts and describe reusable patterns in your own words. Track thesis placement, paragraph movement, sentence rhythm, technical vocabulary, examples, objections, source integration, and uncertainty. Do not copy distinctive sentences or import a model author's philosophical commitments.
 
-If you want Codex to imitate a prose style you admire, create a private file such as:
+Keep the file private if it uses unpublished writing, personal feedback, project details, or local paths.
 
-```text
-project-philosophy-writing/
-└── references/
-    └── prose-control.md
-```
+## Validation
 
-Build it from papers, articles, or book chapters whose prose you like. Use multiple models rather than one source, and extract general writing principles rather than copying sentences.
+After changing the skill, run the current Codex skill validator if one is available.
 
-Recommended workflow:
+Also verify named references, `agents/openai.yaml`, trigger boundaries, and public/private markers. Basic structural validation does not detect semantic conflicts, duplicated operational instructions, or privacy leakage.
 
-1. Choose 3-8 model texts whose prose you admire.
-2. For each text, identify what you like:
-   - sentence length;
-   - paragraph rhythm;
-   - thesis placement;
-   - transition style;
-   - use of examples;
-   - use of objections;
-   - level of technical vocabulary;
-   - balance between exposition and argument;
-   - how sources are introduced;
-   - how the author signals uncertainty, contrast, and concession.
-3. Extract reusable style rules in your own words.
-4. Separate style rules from philosophical commitments. Do not copy the model author's thesis, terminology, or argumentative substance unless you are properly citing and discussing it.
-5. Add positive rules, negative rules, and before/after examples from your own prose.
-6. Keep the file private if it mentions unpublished writing, personal projects, feedback, or local file paths.
+## Privacy
 
-Suggested prompt:
-
-```text
-Help me create a private prose-control file for use with the installed
-`philosophy-writing` skill.
-
-I will provide several papers or excerpts whose prose style I admire. Analyze
-their writing style without copying their sentences. Extract reusable guidance
-for my own philosophical prose.
-
-For each model text, identify:
-
-- thesis placement;
-- paragraph structure;
-- sentence rhythm;
-- transition patterns;
-- use of examples;
-- use of objections and replies;
-- handling of technical terms;
-- balance between exposition and original argument;
-- citation and source-integration habits;
-- tone, directness, and level of abstraction.
-
-Then create a private `prose-control.md` with these sections:
-
-1. Purpose and scope
-2. Model texts used
-3. General style principles
-4. Sentence-level preferences
-5. Paragraph-level preferences
-6. Argument-presentation preferences
-7. Source-integration preferences
-8. Objection-and-reply preferences
-9. Things to avoid
-10. Revision checklist
-
-Rules:
-
-- Do not copy distinctive sentences from the model texts.
-- Do not import the model authors' philosophical commitments into my work.
-- Treat the file as style guidance only.
-- Keep philosophical accuracy, argument validity, and citation duties higher
-  priority than style imitation.
-- Mark this file private if it contains my unpublished prose, project details,
-  or personal writing preferences.
-```
-
-When using a prose-control file, apply it only after the argument is stable. Style control should polish and discipline prose; it should not silently change the thesis, definitions, scope, or evidential commitments.
-
-## Basic Usage
-
-Ask Codex to use `philosophy-writing` and provide the relevant prose, outline, notes, argument sketch, or revision goal.
-
-Examples:
-
-```text
-Use philosophy-writing to review this draft for thesis clarity, argument structure, objections, and prose.
-```
-
-```text
-Use philosophy-writing to turn this idea into a modest, defensible philosophy paper thesis and outline.
-```
-
-```text
-Use philosophy-writing to test this definition against central cases, edge cases, and possible counterexamples.
-```
-
-```text
-Use philosophy-writing to turn this literature review into an argument-driven section that classifies each source by its role.
-```
-
-```text
-Use philosophy-writing to revise this paragraph so it is clearer, more precise, and more directly connected to the thesis.
-```
-
-## Detailed Workflow Overview
-
-The skill follows a staged workflow:
-
-```mermaid
-flowchart TD
-    A["Input<br/>idea, outline, paragraph, section, draft, or review request"] --> B["Task triage"]
-    B --> C["Argument diagnosis"]
-    C --> D{"Task type"}
-    D -->|"drafting"| E["Build thesis, argument spine, outline, then prose"]
-    D -->|"review"| F["Diagnose highest-impact problems before prose polish"]
-    D -->|"revision"| G["Preserve commitments while repairing structure and clarity"]
-    D -->|"definition or objection"| H["Test cases, scope, pressure, and replies"]
-    E --> I["Quality check"]
-    F --> I
-    G --> I
-    H --> I
-```
-
-## Step 1: Triage the Writing Task
-
-Before drafting, reviewing, or revising, Codex should identify:
-
-- genre: essay, article, proposal, section, paragraph, literature review, objection/reply, outline, or draft review;
-- audience: instructor, specialist, general philosopher, peer reviewer, or self-facing draft;
-- stage: brainstorming, outline, rough draft, revision, polish, or final check;
-- local thesis or target claim;
-- larger project thesis, if supplied;
-- section function;
-- argument status;
-- definition status;
-- source constraints;
-- citation style;
-- file-update permission;
-- privacy boundary.
-
-If some information is missing, Codex should proceed with reasonable assumptions and state any assumption that materially affects the output.
-
-## Step 2: Classify the Mode
-
-The skill uses the narrowest mode that satisfies the request:
-
-| Mode | Use when |
-| --- | --- |
-| `outline-only` | The user needs structure before prose. |
-| `argument-outline` | The user needs premises, conclusion, and inferential path. |
-| `section-plan` | The user needs a section's function, order, and transitions. |
-| `prose-draft` | The user wants new prose. |
-| `paragraph-revision` | The user wants one paragraph improved. |
-| `sentence-level-polish` | The argument is stable and only style needs work. |
-| `argument-repair` | The argument has a gap, weak premise, or invalid inference. |
-| `objection-and-reply` | The user needs serious pressure and a response. |
-| `literature review prose` | Sources must be organized by argumentative role. |
-| `draft-review` | The user wants diagnosis and revision priorities. |
-| `revision-plan` | The user needs a sequence of changes before rewriting. |
-
-Default behavior:
-
-- For drafting, outline first unless the user explicitly asks for prose immediately.
-- For review, diagnose the highest-impact philosophical problems before sentence-level issues.
-- For revision, preserve the author's commitments unless the user asks for substantive reconstruction.
-- For file edits, proceed only when the user authorizes editing.
-
-## Step 3: Build the Thesis
-
-A good philosophy thesis should be:
-
-- explicit;
-- contestable;
-- specific;
-- modest enough to defend;
-- connected to a reason;
-- clear about its scope.
-
-Weak thesis:
-
-```text
-This paper is about lying.
-```
-
-Stronger thesis:
-
-```text
-I argue that lying and misleading differ morally because lying normally involves an assertion that the speaker believes to be false.
-```
-
-When the thesis is too broad, Codex should narrow it. When it is merely a topic, Codex should convert it into a claim.
-
-## Step 4: Build the Argument Spine
-
-Before drafting substantial prose, Codex should identify:
-
-- target conclusion;
-- main premises;
-- suppressed premises;
-- inferential links;
-- examples or cases;
-- likely objections;
-- replies;
-- remaining pressure points.
-
-The prose should follow the argument. Background, exposition, and literature review should be included only when they help state the problem, defend a premise, motivate the view, sharpen an objection, or clarify the contribution.
-
-## Step 5: Draft the Prose
-
-When drafting, Codex should:
-
-1. state the thesis early;
-2. give a roadmap when length warrants it;
-3. define technical terms on first use;
-4. present arguments explicitly;
-5. support each important premise;
-6. use examples for abstract claims;
-7. raise at least one serious objection when appropriate;
-8. answer the objection directly;
-9. keep transitions argumentative, not merely decorative;
-10. avoid introducing new arguments in the conclusion.
-
-For short assignments, the introduction should usually be terse: problem, thesis, roadmap.
-
-## Step 6: Review the Draft
-
-When reviewing existing prose, Codex should prioritize:
-
-1. thesis clarity;
-2. section function;
-3. argument structure;
-4. premise support;
-5. definition stability;
-6. objection and reply quality;
-7. source use;
-8. paragraph order;
-9. transitions;
-10. sentence-level clarity.
-
-A review should not merely summarize or praise. It should identify concrete problems and provide concrete fixes.
-
-## Step 7: Repair Arguments
-
-When an argument is weak, Codex should locate the failure:
-
-- Is the conclusion unclear?
-- Is a premise missing?
-- Is a premise unsupported?
-- Is an inference invalid?
-- Is a term shifting meaning?
-- Is the example doing more work than it can support?
-- Is the objection stronger than the reply?
-- Would narrowing the thesis solve the problem?
-
-Repair should preserve the user's philosophical commitments unless the user asks for a more substantive reconstruction.
-
-## Step 8: Test Definitions
-
-When a thesis depends on a definition, Codex should check:
-
-- whether the definition is explicit;
-- whether it is necessary, sufficient, biconditional, stipulative, or provisional;
-- whether each term does real work;
-- whether the definition handles central cases;
-- whether it handles edge cases and counterexamples;
-- whether it shifts during the argument;
-- whether changing the definition requires revising the surrounding argument.
-
-If a prose revision changes the meaning, scope, contrast class, or argumentative function of a load-bearing term, Codex should flag the philosophical risk rather than silently polish the sentence.
-
-## Step 9: Handle Objections and Replies
-
-For each objection, Codex should identify:
-
-- the target: thesis, premise, inference, definition, example, scope condition, or method;
-- the strongest version of the objection;
-- why it matters;
-- what should be conceded;
-- what the reply is;
-- what pressure remains.
-
-Do not answer an objection by restating the thesis. A good reply explains which premise, assumption, inference, or scope condition in the objection fails.
-
-## Step 10: Write Literature Review Prose
-
-Literature review prose should be dialectical. It should classify sources by role:
-
-- background source;
-- opponent;
-- precursor;
-- partial ally;
-- objection source;
-- conceptual resource;
-- methodological model;
-- case source.
-
-For each source, Codex should explain why it matters for the thesis. Avoid neutral author catalogues and avoid claiming that a source supports more than it actually supports.
-
-## Step 11: Revise in Passes
-
-Revision should normally proceed in this order:
-
-1. thesis and scope;
-2. argument spine;
-3. definitions and distinctions;
-4. objections and replies;
-5. section order;
-6. paragraph function;
-7. transitions;
-8. sentence clarity;
-9. citations and quotations.
-
-Do not begin with sentence-level polish when the argument is unstable.
-
-## Output Templates
-
-### Drafting output
-
-```text
-Task mode:
-Assumptions:
-Working thesis:
-Argument spine:
-Outline:
-Draft prose:
-Unresolved issues:
-Suggested next revision:
-```
-
-### Review output
-
-```text
-Overall diagnosis:
-Highest-impact issue:
-Thesis issue:
-Argument issue:
-Structure issue:
-Definition issue:
-Objection/reply issue:
-Literature issue:
-Prose issue:
-Concrete fixes:
-Suggested revision order:
-```
-
-### Revision output
-
-```text
-Revision goal:
-What was preserved:
-What changed:
-Revised prose:
-Why the revision helps:
-Remaining philosophical risks:
-Further revision needed:
-```
-
-### Argument repair output
-
-```text
-Target conclusion:
-Current argument:
-Main weakness:
-Repaired premise set:
-Repaired inference:
-Objection to repaired version:
-Reply:
-Remaining pressure:
-```
-
-### Objection-and-reply output
-
-```text
-Target:
-Objection:
-Why it matters:
-Concession:
-Reply:
-Residual pressure:
-Effect on thesis:
-```
-
-### Literature review prose output
-
-```text
-Local function:
-Source roles:
-Dialectical order:
-Draft prose:
-What each source does:
-What not to overclaim:
-Citation tasks:
-```
-
-## Style Rules
-
-Codex should:
-
-- use plain philosophical prose;
-- prefer short, direct sentences;
-- keep vocabulary stable;
-- define central terms;
-- use examples for abstract claims;
-- distinguish the author's view from opponents' views;
-- avoid grand openings and historical filler;
-- avoid using citations as arguments from authority;
-- use measured evaluative language;
-- mark uncertainty rather than hiding it.
-
-Common problems to flag:
-
-- thesis appears late or is only a topic;
-- roadmap is missing or vague;
-- section has no clear function;
-- too much exposition and too little argument;
-- paragraph does not serve the central argument;
-- objection is raised but not answered;
-- opponent is straw-manned;
-- key term is undefined;
-- definition is not tested against cases;
-- literature review becomes a neutral survey;
-- source is cited for more than it supports;
-- "therefore" or "thus" marks a weak inference;
-- "I believe" is used as support.
-
-## Citation and Source Discipline
-
-Use the citation style specified by the user, department, journal, or target venue. If no style is specified, default to APA 7.
-
-General rules:
-
-- cite paraphrases and borrowed distinctions;
-- cite direct quotations with page or location information when available;
-- do not invent quotations, page numbers, DOI values, editions, or bibliographic metadata;
-- verify citation-processor output before relying on it;
-- use primary texts and professionally curated scholarly sources when possible;
-- treat reference works as orientation, not substitutes for engagement with the arguments.
-
-## File Updates
-
-The default mode is advisory. Codex should not edit files unless the user authorizes file edits.
-
-When file edits are authorized, report:
-
-```text
-Files changed:
-Sections changed:
-What was preserved:
-What changed:
-Philosophical risk:
-Follow-up needed:
-```
-
-## Creating a Private Project Extension
-
-For a full research workflow, keep this public skill general and create a separate private extension. The extension should supply local project context, preferred terms, file paths, templates, and write permissions.
-
-Recommended layout:
-
-```text
-project-philosophy-writing/
-├── SKILL.md
-├── agents/
-│   └── openai.yaml
-└── references/
-    ├── project-context.md
-    ├── writing-templates.md
-    └── write-policy.md
-```
-
-Use this prompt to create one:
-
-```text
-Build a private project-specific extension for the installed
-`philosophy-writing` skill. Do not copy or rewrite the general philosophy
-writing standards. The extension must use `philosophy-writing` for thesis-first
-drafting, argument repair, definition testing, objection/reply development,
-literature review prose, and revision standards, then add only my local project
-context and workflow rules.
-
-Create the extension as a separate skill named `[project-name]-philosophy-writing`
-in `[private skill directory]`. Keep it outside any public repository.
-
-Include:
-
-- the project question, thesis, and stable commitments;
-- tentative hypotheses and open questions, clearly separated from stable claims;
-- preferred terms, definitions, and distinctions;
-- section or part functions, if relevant;
-- writing templates and output formats;
-- citation style and evidence rules;
-- paths and naming conventions for private files;
-- rules for when Codex may read, create, or update project files;
-- privacy boundaries and material that must not be exported, searched, or published.
-
-Design requirements:
-
-1. Keep general philosophy-writing standards in `philosophy-writing`; do not
-   duplicate them.
-2. Make the extension trigger only when prose is being drafted, reviewed, or
-   revised for this specific project.
-3. Tell the agent to use both skills together: the extension supplies local
-   project context, and `philosophy-writing` supplies the general method.
-4. Treat project notes as context, not as independent scholarly evidence.
-5. Preserve existing project files and conventions.
-6. Do not create or update shared files unless the write policy authorizes it.
-7. Put long project context in clearly named reference files and keep `SKILL.md`
-   concise, with explicit instructions about when each reference must be read.
-8. Include `agents/openai.yaml`, validate the finished skill, and report its
-   private installation path and file structure.
-9. Review the completed extension for personal or sensitive information before
-   any publication. Default to keeping the entire extension private.
-
-After creating it, show me a brief boundary audit: what remains in the general
-skill, what lives in the private extension, and whether project-specific or
-personal information appears outside the private directory.
-```
-
-## Repository Contents
-
-```text
-SKILL.md
-agents/openai.yaml
-README.md
-```
-
-## Repository
-
-GitHub: <https://github.com/Aaronlves/philosophy-writing-skill>
+Before publishing changes, scan for personal names, absolute paths, institutional details, unpublished arguments, draft prose, and domain-specific examples that may have come from private work. Prefer neutral examples in the public skill.
